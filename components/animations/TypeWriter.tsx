@@ -17,66 +17,46 @@ export default function TypeWriter({
   deleteSpeed = 50,
   pauseDuration = 2000,
 }: TypeWriterProps) {
-  const [mounted, setMounted] = useState(false);
   const [displayText, setDisplayText] = useState("");
-  const [textIndex, setTextIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted || texts.length === 0) return;
-
-    const currentText = texts[textIndex];
-
-    // Handle pause state
-    if (isPaused) {
-      const pauseTimeout = setTimeout(() => {
-        setIsPaused(false);
-        setIsDeleting(true);
-      }, pauseDuration);
-      return () => clearTimeout(pauseTimeout);
-    }
-
-    // Handle typing complete - trigger pause
-    if (!isDeleting && displayText === currentText) {
-      setIsPaused(true);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      setDisplayText(texts[0]);
       return;
     }
 
-    // Handle delete complete - move to next text
-    if (isDeleting && displayText === "") {
-      setIsDeleting(false);
-      setTextIndex((prev) => (prev + 1) % texts.length);
-      return;
-    }
-
-    // Type or delete character
+    const currentText = texts[currentIndex];
+    
     const timeout = setTimeout(
       () => {
-        if (isDeleting) {
-          setDisplayText((prev) => prev.slice(0, -1));
+        if (!isDeleting) {
+          if (displayText.length < currentText.length) {
+            setDisplayText(currentText.slice(0, displayText.length + 1));
+          } else {
+            setTimeout(() => setIsDeleting(true), pauseDuration);
+          }
         } else {
-          setDisplayText((prev) => currentText.slice(0, prev.length + 1));
+          if (displayText.length > 0) {
+            setDisplayText(displayText.slice(0, -1));
+          } else {
+            setIsDeleting(false);
+            setCurrentIndex((currentIndex + 1) % texts.length);
+          }
         }
       },
       isDeleting ? deleteSpeed : speed
     );
 
     return () => clearTimeout(timeout);
-  }, [mounted, displayText, textIndex, isDeleting, isPaused, texts, speed, deleteSpeed, pauseDuration]);
-
-  if (!mounted) {
-    return <span className={className}>{texts[0] || ""}</span>;
-  }
+  }, [displayText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseDuration]);
 
   return (
     <span className={className}>
-      {displayText || texts[0]}
-      <span className="inline-block w-0.5 h-[1em] bg-current animate-pulse ml-1" />
+      {displayText}
+      <span className="animate-pulse">|</span>
     </span>
   );
 }
