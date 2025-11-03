@@ -17,46 +17,53 @@ export default function TypeWriter({
   deleteSpeed = 50,
   pauseDuration = 2000,
 }: TypeWriterProps) {
+  const [mounted, setMounted] = useState(false);
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      setDisplayText(texts[0]);
-      return;
-    }
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || texts.length === 0) return;
 
     const currentText = texts[currentIndex];
+    let timeout: NodeJS.Timeout;
     
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          if (displayText.length < currentText.length) {
-            setDisplayText(currentText.slice(0, displayText.length + 1));
-          } else {
-            setTimeout(() => setIsDeleting(true), pauseDuration);
-          }
-        } else {
-          if (displayText.length > 0) {
-            setDisplayText(displayText.slice(0, -1));
-          } else {
-            setIsDeleting(false);
-            setCurrentIndex((currentIndex + 1) % texts.length);
-          }
-        }
-      },
-      isDeleting ? deleteSpeed : speed
-    );
+    if (!isDeleting && displayText === currentText) {
+      // Pause before deleting
+      timeout = setTimeout(() => setIsDeleting(true), pauseDuration);
+    } else if (isDeleting && displayText === "") {
+      // Move to next text
+      setIsDeleting(false);
+      setCurrentIndex((prev) => (prev + 1) % texts.length);
+    } else if (isDeleting) {
+      // Delete character
+      timeout = setTimeout(() => {
+        setDisplayText(displayText.slice(0, -1));
+      }, deleteSpeed);
+    } else {
+      // Type character
+      timeout = setTimeout(() => {
+        setDisplayText(currentText.slice(0, displayText.length + 1));
+      }, speed);
+    }
 
-    return () => clearTimeout(timeout);
-  }, [displayText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseDuration]);
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [mounted, displayText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseDuration]);
+
+  if (!mounted) {
+    return <span className={className}>{texts[0] || ""}</span>;
+  }
 
   return (
     <span className={className}>
-      {displayText}
-      <span className="animate-pulse">|</span>
+      {displayText || texts[0]}
+      <span className="animate-pulse ml-1">|</span>
     </span>
   );
 }
