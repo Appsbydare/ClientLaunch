@@ -87,7 +87,6 @@ export default function Home() {
                   className="block mb-4 text-transparent"
                   style={{
                     WebkitTextStroke: '3px black',
-                    textStroke: '3px black',
                   }}
                 >
                   TRANSFORM YOUR
@@ -159,7 +158,6 @@ export default function Home() {
                 className="text-transparent"
                 style={{
                   WebkitTextStroke: '2px black',
-                  textStroke: '2px black',
                 }}
               >
                 OUR
@@ -316,7 +314,6 @@ export default function Home() {
                 className="block mb-4 text-transparent"
                 style={{
                   WebkitTextStroke: '2px black',
-                  textStroke: '2px black',
                 }}
               >
                 READY TO TRANSFORM
