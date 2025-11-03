@@ -27,16 +27,22 @@ export default function TypeWriter({
   }, []);
 
   useEffect(() => {
-    if (!mounted || texts.length === 0) return;
+    if (!mounted || texts.length === 0) {
+      console.log('TypeWriter: Not mounted or no texts');
+      return;
+    }
 
     const currentText = texts[currentIndex];
+    console.log('TypeWriter state:', { displayText, currentText, isDeleting, currentIndex });
     let timeout: NodeJS.Timeout;
     
     if (!isDeleting && displayText === currentText) {
       // Pause before deleting
+      console.log('TypeWriter: Pausing before delete');
       timeout = setTimeout(() => setIsDeleting(true), pauseDuration);
     } else if (isDeleting && displayText === "") {
       // Move to next text
+      console.log('TypeWriter: Moving to next text');
       setIsDeleting(false);
       setCurrentIndex((prev) => (prev + 1) % texts.length);
     } else if (isDeleting) {
