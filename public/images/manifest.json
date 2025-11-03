@@ -1,0 +1,132 @@
+﻿{
+    "07-blog":  {
+                    "images":  [
+                                   {
+                                       "file":  "001-hero.svg",
+                                       "label":  "07. Blog - Image 001"
+                                   },
+                                   {
+                                       "file":  "002-secondary.svg",
+                                       "label":  "07. Blog - Image 002"
+                                   }
+                               ],
+                    "title":  "Blog"
+                },
+    "08-resources":  {
+                         "images":  [
+                                        {
+                                            "file":  "001-hero.svg",
+                                            "label":  "08. Resources - Image 001"
+                                        },
+                                        {
+                                            "file":  "002-secondary.svg",
+                                            "label":  "08. Resources - Image 002"
+                                        }
+                                    ],
+                         "title":  "Resources"
+                     },
+    "01-home":  {
+                    "images":  [
+                                   {
+                                       "file":  "001-hero.svg",
+                                       "label":  "01. Home - Image 001"
+                                   },
+                                   {
+                                       "file":  "002-secondary.svg",
+                                       "label":  "01. Home - Image 002"
+                                   }
+                               ],
+                    "title":  "Home"
+                },
+    "03-case-studies":  {
+                            "images":  [
+                                           {
+                                               "file":  "001-hero.svg",
+                                               "label":  "03. Case Studies - Image 001"
+                                           },
+                                           {
+                                               "file":  "002-secondary.svg",
+                                               "label":  "03. Case Studies - Image 002"
+                                           }
+                                       ],
+                            "title":  "Case Studies"
+                        },
+    "10-legal":  {
+                     "images":  [
+                                    {
+                                        "file":  "001-hero.svg",
+                                        "label":  "10. Legal - Image 001"
+                                    },
+                                    {
+                                        "file":  "002-secondary.svg",
+                                        "label":  "10. Legal - Image 002"
+                                    }
+                                ],
+                     "title":  "Legal"
+                 },
+    "04-process":  {
+                       "images":  [
+                                      {
+                                          "file":  "001-hero.svg",
+                                          "label":  "04. Process - Image 001"
+                                      },
+                                      {
+                                          "file":  "002-secondary.svg",
+                                          "label":  "04. Process - Image 002"
+                                      }
+                                  ],
+                       "title":  "Process"
+                   },
+    "02-services":  {
+                        "images":  [
+                                       {
+                                           "file":  "001-hero.svg",
+                                           "label":  "02. Services - Image 001"
+                                       },
+                                       {
+                                           "file":  "002-secondary.svg",
+                                           "label":  "02. Services - Image 002"
+                                       }
+                                   ],
+                        "title":  "Services"
+                    },
+    "09-contact":  {
+                       "images":  [
+                                      {
+                                          "file":  "001-hero.svg",
+                                          "label":  "09. Contact - Image 001"
+                                      },
+                                      {
+                                          "file":  "002-secondary.svg",
+                                          "label":  "09. Contact - Image 002"
+                                      }
+                                  ],
+                       "title":  "Contact"
+                   },
+    "05-pricing":  {
+                       "images":  [
+                                      {
+                                          "file":  "001-hero.svg",
+                                          "label":  "05. Pricing - Image 001"
+                                      },
+                                      {
+                                          "file":  "002-secondary.svg",
+                                          "label":  "05. Pricing - Image 002"
+                                      }
+                                  ],
+                       "title":  "Pricing"
+                   },
+    "06-about":  {
+                     "images":  [
+                                    {
+                                        "file":  "001-hero.svg",
+                                        "label":  "06. About - Image 001"
+                                    },
+                                    {
+                                        "file":  "002-secondary.svg",
+                                        "label":  "06. About - Image 002"
+                                    }
+                                ],
+                     "title":  "About"
+                 }
+}
