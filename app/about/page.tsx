@@ -1,13 +1,10 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Link from "next/link";
-
-export const metadata = {
-  title: "About Us",
-  description: "Meet the team behind cutting-edge web solutions. Our mission, values, and expertise.",
-};
 
 export default function AboutPage() {
   const team = [

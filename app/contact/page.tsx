@@ -1,11 +1,8 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
-
-export const metadata = {
-  title: "Contact Us",
-  description: "Get in touch to start your project. We're here to help bring your vision to life.",
-};
 
 export default function ContactPage() {
   return (

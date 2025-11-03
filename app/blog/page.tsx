@@ -1,13 +1,10 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Blog",
-  description: "Insights, tips, and industry trends on web design, development, and digital strategy.",
-};
 
 export default function BlogPage() {
   const posts = [

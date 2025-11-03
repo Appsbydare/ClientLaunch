@@ -1,13 +1,10 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Our Process",
-  description: "A proven, transparent process from discovery to launch and beyond.",
-};
 
 export default function ProcessPage() {
   const steps = [

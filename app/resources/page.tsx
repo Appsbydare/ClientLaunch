@@ -1,12 +1,9 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Resources",
-  description: "Free templates, tools, and calculators to help you build better websites.",
-};
 
 export default function ResourcesPage() {
   const resources = [

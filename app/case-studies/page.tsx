@@ -1,13 +1,10 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Case Studies",
-  description: "See how we've helped businesses transform their digital presence with measurable results.",
-};
 
 export default function CaseStudiesPage() {
   const caseStudies = [

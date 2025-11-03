@@ -1,3 +1,5 @@
+"use client";
+
 import SplitText from "@/components/animations/SplitText";
 import GradientText from "@/components/animations/GradientText";
 import TypeWriter from "@/components/animations/TypeWriter";

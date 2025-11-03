@@ -1,10 +1,7 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import GradientText from "@/components/animations/GradientText";
-
-export const metadata = {
-  title: "Legal",
-  description: "Privacy Policy, Terms of Service, and legal information.",
-};
 
 export default function LegalPage() {
   return (

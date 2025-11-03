@@ -1,13 +1,10 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Our Services",
-  description: "Comprehensive web solutions including design, development, e-commerce, and performance optimization.",
-};
 
 export default function ServicesPage() {
   const services = [

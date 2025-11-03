@@ -1,12 +1,9 @@
+"use client";
+
 import FadeIn from "@/components/animations/FadeIn";
 import ScaleIn from "@/components/animations/ScaleIn";
 import GradientText from "@/components/animations/GradientText";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Pricing",
-  description: "Transparent, value-driven pricing for websites and web applications.",
-};
 
 export default function PricingPage() {
   const packages = [
