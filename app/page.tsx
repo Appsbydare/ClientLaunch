@@ -62,14 +62,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <FadeIn>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <SplitText
-                text="Transform Your Business with"
-                className="block mb-2"
-              />
+              <span className="block mb-2">Transform Your Business with</span>
               <GradientText>
                 <TypeWriter
                   texts={["Premium Websites", "Web Applications", "Digital Experiences"]}
-                  className="text-5xl sm:text-6xl lg:text-7xl font-bold"
+                  className="inline-block"
+                  speed={80}
+                  deleteSpeed={40}
+                  pauseDuration={1500}
                 />
               </GradientText>
             </h1>
