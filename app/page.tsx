@@ -63,7 +63,7 @@ export default function Home() {
           <FadeIn>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
               <span className="block mb-2">Transform Your Business with</span>
-              <GradientText>
+              <span className="block text-blue-600">
                 <TypeWriter
                   texts={["Premium Websites", "Web Applications", "Digital Experiences"]}
                   className="inline-block"
@@ -71,7 +71,7 @@ export default function Home() {
                   deleteSpeed={40}
                   pauseDuration={1500}
                 />
-              </GradientText>
+              </span>
             </h1>
           </FadeIn>
           
