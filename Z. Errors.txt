@@ -1,15 +1,38 @@
-
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'W', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'We', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web ', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web A', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Ap', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web App', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Appl', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Appli', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Applic', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Applica', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Applicat', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Applicati', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
-e189441eddaffae6.js:3 TypeWriter state: {displayText: 'Web Applicatio', currentText: 'Web Applications', isDeleting: false, currentIndex: 1}
+20:35:22.706 Running build in Washington, D.C., USA (East) – iad1
+20:35:22.707 Build machine configuration: 2 cores, 8 GB
+20:35:23.260 Cloning github.com/Appsbydare/ClientLaunch (Branch: main, Commit: 0f81024)
+20:35:23.849 Cloning completed: 588.000ms
+20:35:26.523 Restored build cache from previous deployment (BZPNPVpqXsEv5oeZ49q4C9iYaFYh)
+20:35:27.060 Running "vercel build"
+20:35:27.510 Vercel CLI 48.8.0
+20:35:27.892 Installing dependencies...
+20:35:29.329 
+20:35:29.329 up to date in 1s
+20:35:29.330 
+20:35:29.330 145 packages are looking for funding
+20:35:29.330   run `npm fund` for details
+20:35:29.360 Detected Next.js version: 16.0.1
+20:35:29.364 Running "npm run build"
+20:35:29.473 
+20:35:29.474 > temp-nextjs-init@0.1.0 build
+20:35:29.474 > next build
+20:35:29.474 
+20:35:30.488    ▲ Next.js 16.0.1 (Turbopack)
+20:35:30.489 
+20:35:30.549    Creating an optimized production build ...
+20:35:36.367  ✓ Compiled successfully in 5.2s
+20:35:36.372    Running TypeScript ...
+20:35:40.931 Failed to compile.
+20:35:40.931 
+20:35:40.932 ./app/page.tsx:90:21
+20:35:40.933 Type error: Object literal may only specify known properties, and 'textStroke' does not exist in type 'Properties<string | number, string & {}>'.
+20:35:40.933 
+20:35:40.933 [0m [90m 88 |[39m                   style[33m=[39m{{
+20:35:40.933  [90m 89 |[39m                     [33mWebkitTextStroke[39m[33m:[39m [32m'3px black'[39m[33m,[39m
+20:35:40.933 [31m[1m>[22m[39m[90m 90 |[39m                     textStroke[33m:[39m [32m'3px black'[39m[33m,[39m
+20:35:40.934  [90m    |[39m                     [31m[1m^[22m[39m
+20:35:40.934  [90m 91 |[39m                   }}
+20:35:40.934  [90m 92 |[39m                 [33m>[39m
+20:35:40.934  [90m 93 |[39m                   [33mTRANSFORM[39m [33mYOUR[39m[0m
+20:35:40.956 Next.js build worker exited with code: 1 and signal: null
+20:35:40.988 Error: Command "npm run build" exited with 1

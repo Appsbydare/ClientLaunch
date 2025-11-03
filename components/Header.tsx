@@ -14,45 +14,50 @@ export default function Header() {
     { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
-    { name: "Resources", href: "/resources" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <header className="fixed top-0 w-full bg-white border-b-4 border-black z-50 shadow-lg">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-primary">
+            <Link href="/" className="text-3xl font-black text-black uppercase tracking-tight">
               WebAgency
             </Link>
           </div>
           
           {/* Desktop navigation */}
-          <div className="hidden lg:flex lg:gap-x-8">
+          <div className="hidden lg:flex lg:gap-x-10 items-center">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
+                className="text-base font-bold text-black hover:text-blue-600 transition-colors uppercase tracking-wide"
               >
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className="ml-4 px-6 py-3 bg-black text-white font-black uppercase tracking-wide hover:bg-blue-600 transition-all"
+            >
+              GET STARTED
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden rounded-md p-2 text-gray-700 dark:text-gray-300"
+            className="lg:hidden rounded-md p-2 text-black border-2 border-black"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -60,17 +65,24 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-2">
+          <div className="lg:hidden py-4 space-y-2 border-t-2 border-black">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                className="block px-3 py-3 text-lg font-bold text-black hover:bg-black hover:text-white uppercase tracking-wide"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className="block mx-3 mt-4 px-6 py-4 bg-black text-white font-black text-center uppercase tracking-wide"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              GET STARTED
+            </Link>
           </div>
         )}
       </nav>

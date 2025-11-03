@@ -78,54 +78,54 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - White */}
-      <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden pt-32 pb-20">
+        <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <FadeIn>
-            <div className="mb-16">
-              <h1 className="font-black mb-8 leading-tight">
+            <div className="mb-20">
+              <h1 className="font-black mb-12 leading-[0.9]">
                 <span 
-                  className="block text-6xl sm:text-7xl lg:text-8xl mb-4 text-transparent"
+                  className="block text-[clamp(4rem,15vw,18rem)] mb-8 text-transparent"
                   style={{
-                    WebkitTextStroke: '2px black',
+                    WebkitTextStroke: 'clamp(3px, 0.5vw, 8px) black',
                     paintOrder: 'stroke fill',
                   }}
                 >
                   TRANSFORM YOUR
                 </span>
-                <span className="block text-6xl sm:text-7xl lg:text-8xl text-black mb-6">
+                <span className="block text-[clamp(4rem,15vw,18rem)] text-black mb-12">
                   BUSINESS WITH
                 </span>
               </h1>
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-blue-600 min-h-[80px] flex items-center justify-center">
+              <div className="text-[clamp(3rem,12vw,15rem)] font-black text-blue-600 min-h-[clamp(120px,15vw,200px)] flex items-center justify-center leading-tight">
                 <TypeWriter
                   texts={["PREMIUM WEBSITES", "WEB APPLICATIONS", "DIGITAL EXPERIENCES"]}
                   className="inline-block"
-                  speed={80}
-                  deleteSpeed={40}
-                  pauseDuration={1500}
+                  speed={60}
+                  deleteSpeed={30}
+                  pauseDuration={2000}
                 />
               </div>
             </div>
           </FadeIn>
           
           <FadeIn delay={400}>
-            <p className="text-xl sm:text-2xl text-gray-700 mb-14 max-w-4xl mx-auto font-semibold">
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-700 mb-16 max-w-5xl mx-auto font-bold leading-relaxed">
               Expert design • Cutting-edge development • Proven results
             </p>
           </FadeIn>
 
           <FadeIn delay={600}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center">
               <Link
                 href="/contact"
-                className="group relative px-12 py-6 bg-black text-white text-lg font-black uppercase tracking-wider overflow-hidden transition-all hover:scale-105"
+                className="group relative px-16 py-8 bg-black text-white text-2xl font-black uppercase tracking-wider overflow-hidden transition-all hover:scale-105 shadow-2xl"
               >
                 <span className="relative z-10">START YOUR PROJECT →</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </Link>
               <Link
                 href="/case-studies"
-                className="px-12 py-6 border-4 border-black text-black hover:bg-black hover:text-white text-lg font-black uppercase tracking-wider transition-all hover:scale-105"
+                className="px-16 py-8 border-4 border-black text-black hover:bg-black hover:text-white text-2xl font-black uppercase tracking-wider transition-all hover:scale-105 shadow-2xl"
               >
                 VIEW OUR WORK
               </Link>
